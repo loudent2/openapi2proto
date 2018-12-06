@@ -164,6 +164,9 @@ func TestGenerateProto(t *testing.T) {
 			options:     true,
 			fixturePath: "fixtures/custom_options.yaml",
 		},
+		{
+			fixturePath: "fixtures/map_of_array.yaml",
+		},
 	}
 	testGenProto(t, tests...)
 }
