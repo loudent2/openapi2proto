@@ -1,0 +1,37 @@
+swagger: '2.0'
+info:
+  title: 'Array as additional properities'
+  version: '1.0.0'
+  description: 'Demo file to test additional properties as array for the openapi2proto project'
+  termsOfService: ''
+
+definitions:
+  testResponse:
+    type: object
+    properties:
+      testThings:
+        type: array
+        description: 'list of things'
+        items:
+          $ref: '#/definitions/TestThings'
+      mappedTestThings:
+        type: object
+        description: 'map of testThingStuff'
+        additionalProperties:
+          type: array
+          description: list of test thing Stuff
+          items:
+            $ref: '#/definitions/TestThingStuff'
+  TestThings:
+    properties:
+      test:
+        type: string
+        description: 'string data'
+  TestThingStuff:
+    properties:
+      testThingStuffData1:
+        type: string
+        description: 'some data'
+      testThingStuffData2:
+        type: string
+        description: 'some data'

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package arrayasadditionalproperities;
+
+message TestResponse {
+    // map of testThingStuff
+    map<string, TestThingStuff> mappedTestThings = 1;
+
+    // list of things
+    repeated TestThings testThings = 2;
+}
+
+message TestThingStuff {
+    // some data
+    string testThingStuffData1 = 1;
+
+    // some data
+    string testThingStuffData2 = 2;
+}
+
+message TestThings {
+    // string data
+    string test = 1;
+}
